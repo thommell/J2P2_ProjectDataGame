@@ -7,9 +7,11 @@ public class BasicClickSystem : MonoBehaviour
 {
     [SerializeField] private float points;
     [SerializeField] private float autoPointsPS = 0f;
-    [SerializeField] public TextMeshProUGUI displayPoints;
-    [SerializeField] public float[] increaseAutoPoints = { 50f, 250f , 500f , 1000f, 10000f, 100000f, 500000f, 1000000f, };
-    [SerializeField] public int x = 0;
+    [SerializeField] private TextMeshProUGUI displayPoints;
+    [SerializeField] private TextMeshProUGUI criticalHitMessage;
+    [SerializeField] private float[] increaseAutoPoints = { 50f, 250f , 500f , 1000f, 10000f, 100000f, 500000f, 1000000f };
+    [SerializeField] private int x = 0;
+    private float clicks;
    // [SerializeField] public bool enoughPoints = false;
     
  
@@ -20,6 +22,18 @@ public class BasicClickSystem : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             points++;
+            clicks++;
+
+           int criticalHit = Random.Range(1, 1000);
+            Debug.Log(criticalHit);
+            if (criticalHit == 69 || criticalHit == 727 || criticalHit == 420)
+            {           
+                points += 10;
+                criticalHitMessage.gameObject.SetActive(true);
+                Debug.Log("pog");
+            }
+            
+
         }
         if(points <= increaseAutoPoints[x])
         {
@@ -31,4 +45,6 @@ public class BasicClickSystem : MonoBehaviour
             autoPointsPS++;
         }
     }
+
+
 }
