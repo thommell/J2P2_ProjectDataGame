@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class OnClickMainMenu : MonoBehaviour
 {
     [SerializeField] Button playButton;
@@ -21,6 +22,7 @@ public class OnClickMainMenu : MonoBehaviour
     public void PlayButton()
     {
         Debug.Log("Play");
+        SceneManager.LoadScene(1);
     }
     public void QuitButton()
     {
