@@ -6,14 +6,17 @@ using UnityEngine.SceneManagement;
 public class OnClickMainMenu : MonoBehaviour
 {
     [SerializeField] TransitionElevator _ts;
+    [SerializeField] GameManager _gm;
 
     [SerializeField] Button playButton;
     [SerializeField] Button settingsButton;
     [SerializeField] Button quitButton;
 
-    private int sceneNumber;
+    public float time;
 
-    private bool coroutineCheck = false;
+
+
+
     private void Start()
     { 
         playButton.GetComponent<Button>();
@@ -27,55 +30,25 @@ public class OnClickMainMenu : MonoBehaviour
     }
     public void PlayButton()
     {
-        float time = 0.5f;
-        sceneNumber = 1;
-        StartCoroutine(CloseTransition(time));
+        time = 0.5f;
+        _gm.sceneNumber = 1;
+        StartCoroutine(_gm.CloseTransition(time));
         Debug.Log("Play");
     }
     public void QuitButton()
     {
 
-        StartCoroutine(CloseTransition(0.5f));
+        StartCoroutine(_gm.CloseTransition(0.5f));
         Debug.Log("Quit");
     }
     public void SettingsButton()
     {
 
-        StartCoroutine(CloseTransition(0.5f));
+        StartCoroutine(_gm.CloseTransition(0.5f));
         Debug.Log("Settings");
     }
     /// <summary>
-    /// Coroutine to wait for <see cref="TransitionElevator.Move(float)"/> to finish before loading the new scene
+    /// Coroutine to wait for <see cref="TransitionElevator.ElevatorTransition(float)"/> to finish before loading the new scene
     /// </summary>
-    IEnumerator CloseTransition(float timeWait)
-    {
-        yield return StartCoroutine(_ts.Move(timeWait * Time.deltaTime));
-        if (coroutineCheck)
-            yield break;
-        coroutineCheck = true;
-
-        //yield return new WaitForSeconds(timeWait);
-
-        switch (sceneNumber)
-        {
-            case 1:
-                SceneManager.LoadScene(1);
-                break;
-            case 2:
-                SceneManager.LoadScene(2);
-                break;
-            case 3:
-                SceneManager.LoadScene(3);
-                break;
-            default:
-                break;
-        }
-
-        coroutineCheck = false;
-    }
-
-    IEnumerator OpenTransition(float timeWait)
-    {
-        yield break;
-    }
+    
 }

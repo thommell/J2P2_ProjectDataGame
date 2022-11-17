@@ -7,6 +7,8 @@ public class TransitionElevator : MonoBehaviour
     [SerializeField] RectTransform squareL;
     [SerializeField] RectTransform squareR;
 
+    [SerializeField] GameManager _gm;
+
     // animate the game object from -1 to +1 and back
     //public float minimum = 0f;
     // public float maximum = 1000F;
@@ -15,17 +17,17 @@ public class TransitionElevator : MonoBehaviour
 
     public void TransitionStart(float time)
     {
-        StartCoroutine(Move(time * Time.deltaTime));
+        StartCoroutine(ElevatorTransition(time * Time.deltaTime));
     }
 
-    public IEnumerator Move(float time)
+    public IEnumerator ElevatorTransition(float time)
     {
         Vector2 destination = squareL.position + new Vector3(Screen.width * 0.52f, 0);
 
         while (squareL.position.x < destination.x)
         {
-            squareL.position = Vector2.Lerp(squareL.position, squareL.position + new Vector3(Screen.width * 0.5f, 0), time);
-            squareR.position = Vector2.Lerp(squareR.position, squareR.position - new Vector3(Screen.width * 0.5f, 0), time);
+            squareL.position = Vector2.Lerp(squareL.position, squareL.position + new Vector3(Screen.width * 0.5f * _gm.openClose, 0), time);
+            squareR.position = Vector2.Lerp(squareR.position, squareR.position - new Vector3(Screen.width * 0.5f * _gm.openClose, 0), time);
             yield return new WaitForSeconds(time / 2);
         }
 
