@@ -5,7 +5,7 @@ using TMPro;
 
 public class BasicClickSystem : MonoBehaviour
 {
-    [SerializeField] private float points;
+    [SerializeField] public float points = 2000;
     [SerializeField] private float autoPointsPS = 0f;
     [SerializeField] private TextMeshProUGUI displayPoints;
     [SerializeField] private TextMeshProUGUI criticalHitMessage;

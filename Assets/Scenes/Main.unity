@@ -210,20 +210,20 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 407936400}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 290}
+  m_LocalScale: {x: 0.0032894737, y: 0.0032894737, z: 0.0032894737}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1232389311}
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 1464989313}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
+  m_SizeDelta: {x: 1440, y: 3040}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &590545457
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,6 +233,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 590545458}
+  - component: {fileID: 590545459}
   m_Layer: 0
   m_Name: Upgrades
   m_TagString: Untagged
@@ -257,6 +258,29 @@ Transform:
   m_Father: {fileID: 1464989313}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &590545459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590545457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad31ebec52a9de04b8cfe9ced715d1d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script: {fileID: 599849345}
+  GTX9090: {fileID: 1563632664}
+  CryptoApe: {fileID: 1087450529}
+  TradeBot: {fileID: 0}
+  MiningTrojan: {fileID: 0}
+  Misinformation: {fileID: 0}
+  MonkeyPNG: {fileID: 0}
+  TopRadditCryptowins: {fileID: 0}
+  CryptoInfluencer: {fileID: 0}
+  BloodSacrificeTTCG: {fileID: 0}
+  IlluminatiMarketControl: {fileID: 0}
 --- !u!1 &599849341
 GameObject:
   m_ObjectHideFlags: 0
@@ -705,7 +729,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1087450530}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 590545459}
+        m_TargetAssemblyTypeName: CryptoUpgrades, Assembly-CSharp
+        m_MethodName: ButtonCryptoApe
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1087450530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1008,6 +1044,7 @@ RectTransform:
   - {fileID: 1813236881}
   - {fileID: 1513820596}
   - {fileID: 590545458}
+  - {fileID: 407936404}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1234,7 +1271,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1563632665}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 590545459}
+        m_TargetAssemblyTypeName: CryptoUpgrades, Assembly-CSharp
+        m_MethodName: ButtonGTX9090
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1563632665
 MonoBehaviour:
   m_ObjectHideFlags: 0
