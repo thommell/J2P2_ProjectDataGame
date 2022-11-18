@@ -8,9 +8,10 @@ public class OnClickMainMenu : MonoBehaviour
     [SerializeField] TransitionElevator _ts;
     [SerializeField] GameManager _gm;
 
-    [SerializeField] Button playButton;
-    [SerializeField] Button settingsButton;
-    [SerializeField] Button quitButton;
+    public Button playButton;
+    public Button settingsButton;
+    public Button quitButton;
+    public Button savesButton;
 
     public float time;
 
@@ -22,10 +23,12 @@ public class OnClickMainMenu : MonoBehaviour
         playButton.GetComponent<Button>();
         settingsButton.GetComponent<Button>();
         quitButton.GetComponent<Button>();
+        savesButton.GetComponent<Button>();
 
         playButton.onClick.AddListener(PlayButton);
         settingsButton.onClick.AddListener(SettingsButton);
         quitButton.onClick.AddListener(QuitButton);
+        savesButton.onClick.AddListener(SavesButton);
 
     }
     public void PlayButton()
@@ -35,18 +38,24 @@ public class OnClickMainMenu : MonoBehaviour
         StartCoroutine(_gm.CloseTransition(time));
         Debug.Log("Play");
     }
-    public void QuitButton()
-    {
-
-        StartCoroutine(_gm.CloseTransition(0.5f));
-        Debug.Log("Quit");
-    }
     public void SettingsButton()
     {
 
         StartCoroutine(_gm.CloseTransition(0.5f));
         Debug.Log("Settings");
     }
+    public void SavesButton()
+    {
+        StartCoroutine(_gm.CloseTransition(0.5f));
+        Debug.Log("Saves");
+    }
+    public void QuitButton()
+    {
+
+        StartCoroutine(_gm.CloseTransition(0.5f));
+        Debug.Log("Quit");
+    }
+    
     /// <summary>
     /// Coroutine to wait for <see cref="TransitionElevator.ElevatorTransition(float)"/> to finish before loading the new scene
     /// </summary>
