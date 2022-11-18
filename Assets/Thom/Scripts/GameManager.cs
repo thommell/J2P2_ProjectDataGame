@@ -9,7 +9,6 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     [SerializeField] TransitionElevator _ts;
-    [SerializeField] OnClickMainMenu _ocmm;
 
     public bool coroutineCheck = false;
 
@@ -24,19 +23,8 @@ public class GameManager : MonoBehaviour
         }
         else
             DestroyImmediate(this.gameObject);
-        // IGNORE ////
-        // 
-        //instance.gameObject.AddComponent<Button>();
-        //instance._ocmm.quitButton.GetComponent<Button.>();
-        //this.gameObject._ocmm.quitButton;
-        //instance._ocmm.savesButton.GetComponent<Button>();
-        //instance._ocmm.settingsButton.GetComponent<Button>();
-        //instance.AddComponent<GameManager>();
-        //instance.GetComponent<OnClickMainMenu>();
-        //instance.GetComponent<TransitionElevator>();
-        //this.gameObject.ad
-        GameManager
 
+        _ts = FindObjectOfType<TransitionElevator>();
     }
     private void Start()
     {
@@ -56,7 +44,7 @@ public class GameManager : MonoBehaviour
             case 1:
                SceneManager.LoadScene(1);
             yield return new WaitForSeconds(1f);
-            StartCoroutine(OpenTransition(_ocmm.time));
+            StartCoroutine(OpenTransition(0.5f));
                 break;
             case 2:
                 SceneManager.LoadScene(2);
