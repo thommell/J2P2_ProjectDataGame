@@ -476,7 +476,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 553834673}
-  - component: {fileID: 553834674}
   - component: {fileID: 553834675}
   m_Layer: 0
   m_Name: GameManager
@@ -496,29 +495,11 @@ Transform:
   m_LocalPosition: {x: 858.7298, y: 1947.7217, z: -0.59075546}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1112313788}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &553834674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 553834672}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27941b23a26f187478a067945c269dda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _ts: {fileID: 1250023634}
-  _gm: {fileID: 553834675}
-  playButton: {fileID: 932381168}
-  settingsButton: {fileID: 59037146}
-  quitButton: {fileID: 2118974565}
-  savesButton: {fileID: 218946915}
-  time: 0
 --- !u!114 &553834675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -532,8 +513,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _ts: {fileID: 1250023634}
-  _ocmm: {fileID: 553834674}
-  openClose: 0
+  coroutineCheck: 0
   sceneNumber: 0
 --- !u!1 &602389093
 GameObject:
@@ -1109,15 +1089,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1112313787}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -198.67644, y: 1659.6998, z: 25.966764}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1057.4062, y: -288.02185, z: 26.55752}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1195195924}
   - {fileID: 1250023633}
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 553834673}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1195195923
 GameObject:
@@ -1400,6 +1380,7 @@ GameObject:
   - component: {fileID: 1409036752}
   - component: {fileID: 1409036751}
   - component: {fileID: 1409036750}
+  - component: {fileID: 1409036754}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1494,6 +1475,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1409036754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409036749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27941b23a26f187478a067945c269dda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ts: {fileID: 1250023634}
+  _gm: {fileID: 553834675}
+  playButton: {fileID: 932381168}
+  settingsButton: {fileID: 59037146}
+  quitButton: {fileID: 2118974565}
+  savesButton: {fileID: 218946915}
+  time: 0
 --- !u!1 &1532120012
 GameObject:
   m_ObjectHideFlags: 0
