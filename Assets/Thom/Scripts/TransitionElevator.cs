@@ -19,15 +19,15 @@ public class TransitionElevator : MonoBehaviour
     {
         StartCoroutine(ElevatorTransition(time * Time.deltaTime));
     }
-
+    // Opens/Closes the "Elevator" effect 
     public IEnumerator ElevatorTransition(float time)
     {
         Vector2 destination = squareL.position + new Vector3(Screen.width * 0.52f, 0);
 
         while (squareL.position.x < destination.x)
         {
-            squareL.position = Vector2.Lerp(squareL.position, squareL.position + new Vector3(Screen.width * 0.5f * _gm.openClose, 0), time);
-            squareR.position = Vector2.Lerp(squareR.position, squareR.position - new Vector3(Screen.width * 0.5f * _gm.openClose, 0), time);
+            squareL.position = Vector2.Lerp(squareL.position, squareL.position + new Vector3(Screen.width * 0.5f, 0), time);
+            squareR.position = Vector2.Lerp(squareR.position, squareR.position - new Vector3(Screen.width * 0.5f, 0), time);
             yield return new WaitForSeconds(time / 2);
         }
 
