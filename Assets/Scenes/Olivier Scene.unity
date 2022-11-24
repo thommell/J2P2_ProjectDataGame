@@ -1120,20 +1120,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 590545457}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad31ebec52a9de04b8cfe9ced715d1d1, type: 3}
+  m_Script: {fileID: 11500000, guid: d63e0108139b1624bb85d22fa193be2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   script: {fileID: 599849345}
   GTX9090: {fileID: 1563632664}
   CryptoApe: {fileID: 1087450529}
-  TradeBot: {fileID: 0}
-  MiningTrojan: {fileID: 0}
-  Misinformation: {fileID: 0}
-  MonkeyPNG: {fileID: 0}
-  TopRadditCryptowins: {fileID: 0}
-  CryptoInfluencer: {fileID: 0}
-  BloodSacrificeTTCG: {fileID: 0}
-  IlluminatiMarketControl: {fileID: 0}
+  TradeBot: {fileID: 2036751179}
+  MiningTrojan: {fileID: 845594927}
+  Misinformation: {fileID: 216677263}
+  MonkeyPNG: {fileID: 1729894739}
+  TopRadditCryptowins: {fileID: 1141854667}
+  CryptoInfluencer: {fileID: 38386062}
+  BloodSacrificeTTCG: {fileID: 1679444040}
+  IlluminatiMarketControl: {fileID: 1674031895}
 --- !u!1 &599849341
 GameObject:
   m_ObjectHideFlags: 0
@@ -1215,10 +1215,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b1bb9ac366400c4a8abbd90e0f57330, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  points: 20000
+  points: 0
   autoPointsPS: 1
   displayPoints: {fileID: 1813236879}
-  criticalHitMessage: {fileID: 1513820597}
   increaseAutoPoints:
   - 50
   - 250
@@ -2600,9 +2599,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 590545459}
+      - m_Target: {fileID: 590545457}
         m_TargetAssemblyTypeName: CryptoUpgrades, Assembly-CSharp
-        m_MethodName: ButtonGTX9090
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
