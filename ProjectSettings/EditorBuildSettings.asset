@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Thom/Scenes/MainMenu.unity
     guid: 7f492927fe479b14ea735e2d9587fc7b
   - enabled: 1
-    path: Assets/Scenes/Olivier Scene.unity
+    path: Assets/Thom/Scenes/Thom Scene 24 11.unity
     guid: 179dfb1278600034dba95e0bc425a821
   - enabled: 0
     path: Assets/Scenes/Main.unity
