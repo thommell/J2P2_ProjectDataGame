@@ -65,6 +65,7 @@ public class CryptoUpgrades : MonoBehaviour
             script.points -= upgradePricesGTX9090[GTX];
             Debug.Log("upgradeprice = " + upgradePricesGTX9090[GTX]);
             GTX++;
+            Debug.Log("GTX9090" + GTX);
         }
         if (GTX == upgradePricesGTX9090.Length)
         {
@@ -82,6 +83,7 @@ public class CryptoUpgrades : MonoBehaviour
             script.points -= upgradePricesCryptoApe[ape];
             Debug.Log("upgradeprice = " + upgradePricesCryptoApe[ape]);
             ape++;
+            Debug.Log("CryptoApe" + ape);
         }
         if (ape == upgradePricesCryptoApe.Length)
         {
@@ -92,41 +94,129 @@ public class CryptoUpgrades : MonoBehaviour
 
     public void ButtonTradeBot()
     {
+        if (script.points > upgradePricesTradeBot[bot])
+        {
+            script.points -= upgradePricesCryptoApe[bot];
+            Debug.Log("upgradeprice = " + upgradePricesTradeBot[bot]);
+            bot++;
+            Debug.Log("TradeBot" + bot);
+        }
+        if (ape == upgradePricesTradeBot.Length)
+        {
+            Debug.Log("uitgespeeld");
+            TradeBot.interactable = false;
+        }
 
     }
 
     public void ButtonCryptoMiningTrojan()
     {
+        if (script.points > upgradePricesCryptoMiningTrojan[trojan])
+        {
+            script.points -= upgradePricesCryptoMiningTrojan[trojan];
+            Debug.Log("upgradeprice = " + upgradePricesCryptoMiningTrojan[trojan]);
+            trojan++;
+            Debug.Log("CryptoMiningTrojan" + trojan);
+        }
+        if (trojan == upgradePricesCryptoMiningTrojan.Length)
+        {
+            Debug.Log("uitgespeeld");
+            MiningTrojan.interactable = false;
+        }
 
     }
 
     public void ButtonCryptoPriceMisinformation()
     {
+        if (script.points > upgradePricesCryptoPriceMisinformation[mis])
+        {
+            script.points -= upgradePricesCryptoPriceMisinformation[mis];            
+            mis++;
+            Debug.Log("CryptoPriceMisInformation" + mis);
+        }
+        if (mis == upgradePricesCryptoPriceMisinformation.Length)
+        {
+            Debug.Log("uitgespeeld");
+            Misinformation.interactable = false;
+        }
 
     }
 
     public void ButtonMonkeyPNG()
     {
+        if (script.points > upgradePricesMonkeyPNG[png])
+        {
+            script.points -= upgradePricesMonkeyPNG[png];
+            png++;
+         //   Debug.Log("CryptoPriceMisInformation" + );
+        }
+        if (png == upgradePricesMonkeyPNG.Length)
+        {
+            Debug.Log("uitgespeeld");
+            MonkeyPNG.interactable = false;
+        }
 
     }
 
     public void ButtonTopRadditCryptowins()
     {
-
+        if (script.points > upgradePricesTopRadditCryptowins[top])
+        {
+            script.points -= upgradePricesTopRadditCryptowins[top];
+            top++;
+            //   Debug.Log("CryptoPriceMisInformation" + );
+        }
+        if (top == upgradePricesTopRadditCryptowins.Length)
+        {
+            Debug.Log("uitgespeeld");
+            TopRadditCryptowins.interactable = false;
+        }
     }
 
     public void ButtonCryptoInfluencer()
     {
-
+        if (script.points > upgradePricesCryptoInfluencer[crypto])
+        {
+            script.points -= upgradePricesCryptoInfluencer[crypto];
+            crypto++;
+            //   Debug.Log("CryptoPriceMisInformation" + );
+        }
+        if (crypto == upgradePricesCryptoInfluencer.Length)
+        {
+            Debug.Log("uitgespeeld");
+            CryptoInfluencer.interactable = false;
+        }
     }
 
     public void ButtonBloodSacrificeToTheCryptoGods()
     {
+        if (script.points > upgradePricesBloodSacrificeToTheCryptoGods[blood])
+        {
+            script.points -= upgradePricesBloodSacrificeToTheCryptoGods[blood];
+            blood++;
+            //   Debug.Log("CryptoPriceMisInformation" + );
+        }
+        if (blood == upgradePricesBloodSacrificeToTheCryptoGods.Length)
+        {
+            Debug.Log("uitgespeeld");
+            BloodSacrificeTTCG.interactable = false;
+        }
 
     }
 
     public void ButtonIlluminatiMarketControl()
     {
+        if (script.points > upgradePricesIlluminatiMarketControl[market])
+        {
+            script.points -= upgradePricesIlluminatiMarketControl[market];
+            market++;
+            //   Debug.Log("CryptoPriceMisInformation" + );
+        }
+        if (market == upgradePricesIlluminatiMarketControl.Length)
+        {
+            Debug.Log("uitgespeeld");
+            IlluminatiMarketControl.interactable = false;
+        }
 
     }
   
