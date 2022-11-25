@@ -14,10 +14,6 @@ public class OnClickMainMenu : MonoBehaviour
     public Button savesButton;
 
     public float time;
-
-
-
-
     private void Start()
     { 
         playButton.GetComponent<Button>();
@@ -54,6 +50,7 @@ public class OnClickMainMenu : MonoBehaviour
 
         StartCoroutine(_gm.CloseTransition(0.5f));
         Debug.Log("Quit");
+        Application.Quit();
     }
     
     /// <summary>
