@@ -7,7 +7,7 @@ public class BasicClickSystem : MonoBehaviour
 {
     [SerializeField] public float points;
     [SerializeField] private float autoPointsPS = 0f;
-    [SerializeField] public TextMeshProUGUI displayPoints;
+    [SerializeField] public TextMeshProUGUI displayPoints, displayPoints2;
     [SerializeField] public float[] increaseAutoPoints = { 50f, 250f , 500f , 1000f, 10000f, 100000f, 500000f, 1000000f, };
     [SerializeField] public int x = 0;
    // [SerializeField] public bool enoughPoints = false;
@@ -16,6 +16,7 @@ public class BasicClickSystem : MonoBehaviour
     void Update()
     {
         displayPoints.text = "Score: " + System.Math.Round(points, 1).ToString();
+        displayPoints2.text = "Score: " + System.Math.Round(points, 1).ToString();
 
         if (Input.GetMouseButtonDown(0))
         {
