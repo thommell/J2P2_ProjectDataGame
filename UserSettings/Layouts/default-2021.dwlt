@@ -20,10 +20,14 @@ MonoBehaviour:
     height: 780.8
   m_ShowMode: 4
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Title: Scene
 =======
   m_Title: Simulator
 >>>>>>> Victor
+=======
+  m_Title: Hierarchy
+>>>>>>> Olimier
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -124,7 +128,11 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
+<<<<<<< HEAD
   controlID: 94
+=======
+  controlID: 33418
+>>>>>>> Olimier
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,12 +152,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 1172
     height: 730.8
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
   controlID: 72
+=======
+    width: 1169.6
+    height: 770.8
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 16192, y: 16192}
+  vertical: 1
+  controlID: 33376
+>>>>>>> Olimier
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,12 +186,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 1172
     height: 421.6
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
   controlID: 73
+=======
+    width: 1169.6
+    height: 511.2
+  m_MinSize: {x: 200, y: 100}
+  m_MaxSize: {x: 16192, y: 8096}
+  vertical: 0
+  controlID: 33377
+>>>>>>> Olimier
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -193,7 +219,11 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 306.4
+<<<<<<< HEAD
     height: 421.6
+=======
+    height: 511.2
+>>>>>>> Olimier
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
@@ -246,6 +276,7 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 0
     y: 421.6
     width: 1172
@@ -253,6 +284,15 @@ MonoBehaviour:
   m_MinSize: {x: 101, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 16}
+=======
+    x: 306.4
+    y: 0
+    width: 863.19995
+    height: 511.2
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 12}
+>>>>>>> Olimier
   m_Panes:
   - {fileID: 15}
   - {fileID: 16}
@@ -400,23 +440,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 495.2
     width: 1258.4
     height: 235.59998
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 12}
+=======
+    y: 511.2
+    width: 1169.6
+    height: 259.59998
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 16}
+>>>>>>> Olimier
   m_Panes:
   - {fileID: 12}
   - {fileID: 16}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -433,10 +482,48 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 306.4
     y: 113.6
     width: 863.6
     height: 400.6
+=======
+    x: 1169.6
+    y: 0
+    width: 288
+    height: 770.8
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 17}
+  m_Panes:
+  - {fileID: 17}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &12
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13974, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Simulator
+    m_Image: {fileID: 3038311277492192215, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 306.4
+    y: 73.6
+    width: 861.19995
+    height: 490.2
+>>>>>>> Olimier
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -465,7 +552,11 @@ MonoBehaviour:
     - UnityEditor.DeviceSimulation.ApplicationSettingsPlugin
     pluginStates:
     - '{}'
+<<<<<<< HEAD
     scale: 20
+=======
+    scale: 28
+>>>>>>> Olimier
     fitToScreenEnabled: 0
     rotationDegree: 0
     highlightSafeAreaEnabled: 0
@@ -656,15 +747,21 @@ MonoBehaviour:
     height: 400.6
 =======
     y: 73.6
+<<<<<<< HEAD
     width: 308.6
     height: 474.2
 >>>>>>> Victor
+=======
+    width: 305.4
+    height: 490.2
+>>>>>>> Olimier
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
+<<<<<<< HEAD
       scrollPos: {x: 0, y: 0}
 <<<<<<< HEAD
       m_SelectedIDs: 
@@ -675,6 +772,12 @@ MonoBehaviour:
       m_LastClickedID: -590850
       m_ExpandedIDs: f4fbf6ff06fcf6ffe2fcf6ff30fdf6fffe90f9ff3292f9ff8092f9ff60adf9ff56ebffff5cebffff66ebffff26f6ffff28f6ffff2af6ffff82f7ffff2af8ffff8af8ffff26fbffff
 >>>>>>> Victor
+=======
+      scrollPos: {x: 0, y: 38.799988}
+      m_SelectedIDs: 10600000
+      m_LastClickedID: 24592
+      m_ExpandedIDs: 78e7ffff26fbffffa85f0000c25f0000cc5f0000ea5f0000fe5f0000246000002e6000004660000050600000586000006a600000746000008660000098600000a8600000
+>>>>>>> Olimier
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -719,6 +822,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 306.4
     y: 113.6
     width: 863.6
@@ -729,6 +833,12 @@ MonoBehaviour:
     width: 946.80005
     height: 474.2
 >>>>>>> Victor
+=======
+    x: 306.4
+    y: 73.6
+    width: 861.19995
+    height: 490.2
+>>>>>>> Olimier
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -953,6 +1063,7 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_Position:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: 1600.9908, y: 1483.2563, z: -55.24012}
     speed: 2
     m_Value: {x: 1600.9908, y: 1483.2563, z: -55.24012}
@@ -961,6 +1072,11 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 1.5656316, y: 0.26644915, z: -0.01253899}
 >>>>>>> Victor
+=======
+    m_Target: {x: 1564.3225, y: 1970.9764, z: -10.742981}
+    speed: 2
+    m_Value: {x: 1564.3225, y: 1970.9764, z: -10.742981}
+>>>>>>> Olimier
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1012,6 +1128,7 @@ MonoBehaviour:
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: 2387.8237
     speed: 2
     m_Value: 2387.8237
@@ -1020,6 +1137,11 @@ MonoBehaviour:
     speed: 2
     m_Value: 1.7519094
 >>>>>>> Victor
+=======
+    m_Target: 1066.3098
+    speed: 2
+    m_Value: 1066.3098
+>>>>>>> Olimier
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1066,6 +1188,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 535.2
     width: 1159
     height: 288.19998
@@ -1087,6 +1210,11 @@ MonoBehaviour:
     width: 946.80005
     height: 474.2
 >>>>>>> Victor
+=======
+    y: 584.8
+    width: 1168.6
+    height: 238.59998
+>>>>>>> Olimier
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1118,9 +1246,15 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: 8a600000
     m_LastClickedID: 24714
     m_ExpandedIDs: 000000004c6000005860000000ca9a3b
+=======
+    m_SelectedIDs: 34610000
+    m_LastClickedID: 24884
+    m_ExpandedIDs: 000000003861000000ca9a3b
+>>>>>>> Olimier
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1148,7 +1282,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 000000004c600000
+=======
+    m_ExpandedIDs: 000000003861000000ca9a3b
+>>>>>>> Olimier
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1173,10 +1311,17 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
+<<<<<<< HEAD
     m_SelectedInstanceIDs: 92600000
     m_LastClickedInstanceID: 24722
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
+=======
+    m_SelectedInstanceIDs: ea5f0000
+    m_LastClickedInstanceID: 24554
+    m_HadKeyboardFocusLastEvent: 0
+    m_ExpandedInstanceIDs: c623000000000000f2600000
+>>>>>>> Olimier
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1259,6 +1404,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 535.2
     width: 1171
     height: 288.19998
@@ -1267,6 +1413,11 @@ MonoBehaviour:
     width: 1257.4
     height: 214.59998
 >>>>>>> Victor
+=======
+    y: 584.8
+    width: 1168.6
+    height: 238.59998
+>>>>>>> Olimier
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1292,6 +1443,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 1172
     y: 113.6
     width: 363
@@ -1301,6 +1453,12 @@ MonoBehaviour:
     width: 276.59998
 >>>>>>> Victor
     height: 709.8
+=======
+    x: 1169.6
+    y: 73.6
+    width: 287
+    height: 749.8
+>>>>>>> Olimier
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
