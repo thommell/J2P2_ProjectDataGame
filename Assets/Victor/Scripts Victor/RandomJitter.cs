@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class RandomJitter : MonoBehaviour
 {
-    private float jitterAmount;
+    private float xJitter;
+    private float yJitter;
     private float timer;
-    [SerializeField] float jitterTime;
-    //[SerializeField] GameObject rocketShip;
+    private float jitterTime;
 
     private void Start()
     {
@@ -18,15 +18,16 @@ public class RandomJitter : MonoBehaviour
         timer = Time.deltaTime;
         if(jitterTime >= timer)
         {
-            transform.position = new Vector3(jitterAmount, -3);
+            transform.position = new Vector3(xJitter, yJitter);
             JitterRNG();
             timer = 0;
         }
     }
     private void JitterRNG()
     {
-        jitterAmount = Random.Range(-0.2f, 0.2f);
-        jitterTime = Random.Range(1.5f, 2f );
+        xJitter = Random.Range(-0.05f, 0.05f);
+        yJitter = Random.Range(-3.2f, -2.8f);
+        jitterTime = Random.Range(2.5f, 3f );
     }
     
 }
