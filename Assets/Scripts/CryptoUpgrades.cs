@@ -15,6 +15,7 @@ public class CryptoUpgrades : MonoBehaviour
     int GTX = 0;
     public TextMeshProUGUI displayGTXPrice;
     public float gtxPrice = 100f;
+    bool gtxActive = false;
 
     [Header("Crypto Ape")]
     public Button CryptoApe;
@@ -75,16 +76,22 @@ public class CryptoUpgrades : MonoBehaviour
     void Update()
     {
 
-        displayGTXPrice.text = System.Math.Round(gtxPrice) + ("   Level   " + GTX).ToString();
-        displayApePrice.text = System.Math.Round(apePrice) + ("   Level   " + ape).ToString();
-        displayBotPrice.text = System.Math.Round(botPrice) + ("   Level   " + bot).ToString();
-        displayTrojanPrice.text = System.Math.Round(trojanPrice) + ("   Level   " + trojan).ToString();
-        displayMisinformationPrice.text = System.Math.Round(misinformationPrice) + ("   Level   " + mis).ToString();
-        displayPNGPrice.text = System.Math.Round(monkeyPrice) + ("   Level   " + png).ToString();
-        displayRadditPrice.text = System.Math.Round(radditPrice) + ("   Level   " + top).ToString();
-        displayInfluencerPrice.text = System.Math.Round(influencerPrice) + ("   Level   " + crypto).ToString();
-        displayBSTTCGPrice.text = System.Math.Round(bsttcgPrice) + ("   Level   " + blood).ToString();
-        displayMarketPrice.text = System.Math.Round(illuminatiPrice) + ("   Level   " + market).ToString();
+        displayGTXPrice.text =("€ ") + System.Math.Round(gtxPrice) + ("   Level   " + GTX).ToString();
+        displayApePrice.text =("€ ") + System.Math.Round(apePrice) + ("   Level   " + ape).ToString();
+        displayBotPrice.text =("€ ") + System.Math.Round(botPrice) + ("   Level   " + bot).ToString();
+        displayTrojanPrice.text =("€ ") + System.Math.Round(trojanPrice) + ("   Level   " + trojan).ToString();
+        displayMisinformationPrice.text = ("€ ") + System.Math.Round(misinformationPrice) + ("   Level   " + mis).ToString();
+        displayPNGPrice.text = ("€ ") + System.Math.Round(monkeyPrice) + ("   Level   " + png).ToString();
+        displayRadditPrice.text = ("€ ") + System.Math.Round(radditPrice) + ("   Level   " + top).ToString();
+        displayInfluencerPrice.text = ("€ ") + System.Math.Round(influencerPrice) + ("   Level   " + crypto).ToString();
+        displayBSTTCGPrice.text = ("€ ") + System.Math.Round(bsttcgPrice) + ("   Level   " + blood).ToString();
+        displayMarketPrice.text = ("€ ") + System.Math.Round(illuminatiPrice) + ("   Level   " + market).ToString();
+
+        if (gtxActive == true)
+        {
+            script.points += 1 * Time.deltaTime * GTX;
+        }
+  
     }
     public void ButtonGTX9090()
     {
@@ -95,7 +102,11 @@ public class CryptoUpgrades : MonoBehaviour
             gtxPrice = gtxPrice * 1.2f;
             GTX++;
             Debug.Log("GTX9090 lvl: " + GTX);          
-        }     
+       } 
+       if (GTX >= 1)
+        {
+            gtxActive = true;
+        }
     }
     public void ButtonCryptoApe()
     {
