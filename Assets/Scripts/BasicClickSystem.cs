@@ -6,7 +6,7 @@ using TMPro;
 public class BasicClickSystem : MonoBehaviour
 {
     [SerializeField] public float points;
-    [SerializeField] private float autoPointsPS = 0f;
+ //  [SerializeField] private float autoPointsPS = 0f;
     [SerializeField] public TextMeshProUGUI displayPoints, displayPoints2;
     [SerializeField] public float[] increaseAutoPoints = { 50f, 250f , 500f , 1000f, 10000f, 100000f, 500000f, 1000000f, };
     [SerializeField] public int x = 0;
@@ -22,7 +22,7 @@ public class BasicClickSystem : MonoBehaviour
         {
             points++;
         }
-        if(points <= increaseAutoPoints[x])
+    /*    if(points <= increaseAutoPoints[x])
         {
            points += 1 * Time.deltaTime * autoPointsPS;          
         }
@@ -31,5 +31,6 @@ public class BasicClickSystem : MonoBehaviour
             x++;
             autoPointsPS++;
         }
+    */
     }
 }
