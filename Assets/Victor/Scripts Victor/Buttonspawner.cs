@@ -6,16 +6,11 @@ using UnityEngine.Rendering;
 public class Buttonspawner : MonoBehaviour
 {
     [SerializeField] GameObject timedEventButton;
-    private void Awake()
-    {
-        
-    }
-
     void Update()
     {
         if (GameObject.Find("Timed Event Button(Clone)") == null)
         {
-            Vector2 randomSpawnPos = new Vector2(Random.Range(-2f, 2f), Random.Range(-4.5f, 4.2f));
+            Vector2 randomSpawnPos = new Vector2(Random.Range(-2f, 2f), Random.Range(-4.5f, 4f));
             Instantiate(timedEventButton, randomSpawnPos, Quaternion.identity);
         }
     }
