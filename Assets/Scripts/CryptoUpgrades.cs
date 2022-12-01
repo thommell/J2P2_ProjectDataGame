@@ -84,10 +84,10 @@ public class CryptoUpgrades : MonoBehaviour
     private float period = 0.0f;
     private float period2 = 0.0f;
     private float period3 = 0.0f;
+    private float period4 = 0.0f;
 
     void Update()
     {
-
         displayGTXPrice.text =("€ ") + System.Math.Round(gtxPrice) + ("   Level   " + GTX).ToString();
         displayApePrice.text =("€ ") + System.Math.Round(apePrice) + ("   Level   " + ape).ToString();
         displayBotPrice.text =("€ ") + System.Math.Round(botPrice) + ("   Level   " + bot).ToString();
@@ -109,6 +109,10 @@ public class CryptoUpgrades : MonoBehaviour
                 }
                 else
                     script.points += trojan * 3f;
+            }
+            if(illuminatiActive == true)
+            {
+                script.points += market * 47.61f;
             }
             autoPeriod = 0;
         }
@@ -155,13 +159,27 @@ public class CryptoUpgrades : MonoBehaviour
             {
                 script.points += top * 27.5f;
             }
+            if(influencerActive == true)
+            {
+                script.points += crypto * 35f;
+
+            }
             period3 = 0;
+        }
+        if(period4 > 30)
+        {
+            if(bloodActive == true)
+            {
+                script.points += blood * 75f;
+            }
+            period4 = 0;
         }
 
         autoPeriod += UnityEngine.Time.deltaTime;
         period += UnityEngine.Time.deltaTime; 
         period2 += UnityEngine.Time.deltaTime;
         period3 += UnityEngine.Time.deltaTime;
+        period4 += UnityEngine.Time.deltaTime;
     }
     public void ButtonGTX9090()
     {
@@ -279,6 +297,10 @@ public class CryptoUpgrades : MonoBehaviour
             influencerPrice = influencerPrice * 1.2f;
             crypto++;
         }
+        if(crypto >= 1)
+        {
+            influencerActive = true;
+        }
     }
 
     public void ButtonBloodSacrificeToTheCryptoGods()
@@ -289,6 +311,10 @@ public class CryptoUpgrades : MonoBehaviour
             bsttcgPrice = bsttcgPrice * 1.225f;
             blood++;
         }
+        if ( blood >= 1)
+        {
+            bloodActive = true;
+        }
     }
 
     public void ButtonIlluminatiMarketControl()
@@ -298,6 +324,10 @@ public class CryptoUpgrades : MonoBehaviour
             script.points -= illuminatiPrice;
             illuminatiPrice = illuminatiPrice * 1.25f;
             market++;
+        }
+        if (market >= 1)
+        {
+            illuminatiActive = true;
         }
     }
 }

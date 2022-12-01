@@ -2114,7 +2114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b1bb9ac366400c4a8abbd90e0f57330, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  points: 0
+  points: 10000
   displayPoints: {fileID: 1813236879}
   displayPoints2: {fileID: 84011475}
   increaseAutoPoints:
