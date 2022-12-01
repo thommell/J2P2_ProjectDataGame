@@ -10,6 +10,8 @@ public class TimedEventButtonScript : MonoBehaviour
     [SerializeField] Sprite unclickedButton;
     [SerializeField] Sprite clickedButton;
     [SerializeField] SpriteRenderer _sr;
+    [SerializeField] MinigameScore _mgs;
+    [SerializeField] FailCounter _fc;
     [SerializeField] Image _slider;
 
     private float lifetime = 5f;
@@ -20,10 +22,14 @@ public class TimedEventButtonScript : MonoBehaviour
     private float pressTimer = 0;
     private float spriteDuration = 0.3f;
 
+    public int buttonsCleared = 0;
+
     private Image _sliderimage;
 
     private void Start()
     {
+        _mgs = FindObjectOfType<MinigameScore>();
+        _fc = FindObjectOfType<FailCounter>();
         _sliderimage = transform.GetChild(0).GetChild(2).GetComponent<Image>();
     }
     private void Update()
@@ -33,11 +39,13 @@ public class TimedEventButtonScript : MonoBehaviour
         {
             Debug.Log("Noob");
             Destroy(gameObject);
+            _fc.failInt++;
         }
         else if(clicksOnButton >= neededClicks)
         {
             Debug.Log("Pro");
             Destroy(gameObject);
+            _mgs.scoreInt++;
         }
 
         if (isPressed)
