@@ -12,12 +12,12 @@ public class ShopOpener : MonoBehaviour
     bool shopActive = false;
     void Update()
     {
-        
+
     }
 
     public void EnableShop()
     {
-        if(shopActive == false)
+        if (shopActive == false)
         {
             shopPanel.SetActive(true);
             shopActive = true;

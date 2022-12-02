@@ -9,11 +9,10 @@ public class ButtonScriptOlivierScene : MonoBehaviour
 
     private void Start()
     {
-        goToMiniGame.onClick.AddListener(MainMenu);
+        goToMiniGame.onClick.AddListener(GoMiniGame);
     }
 
-
-    public void MainMenu()
+    public void GoMiniGame()
     {
         SceneManager.LoadScene(3);
     }
