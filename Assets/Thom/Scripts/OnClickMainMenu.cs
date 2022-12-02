@@ -5,18 +5,12 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class OnClickMainMenu : MonoBehaviour
 {
-    [SerializeField] TransitionElevator _ts;
     [SerializeField] GameManager _gm;
 
     public Button playButton;
     public Button settingsButton;
     public Button quitButton;
     public Button savesButton;
-
-    public float time;
-
-
-
 
     private void Start()
     { 
@@ -33,31 +27,22 @@ public class OnClickMainMenu : MonoBehaviour
     }
     public void PlayButton()
     {
-        time = 0.5f;
-        _gm.sceneNumber = 1;
-        StartCoroutine(_gm.CloseTransition(time));
+        SceneManager.LoadScene(1);
         Debug.Log("Play");
     }
     public void SettingsButton()
     {
-
-        StartCoroutine(_gm.CloseTransition(0.5f));
         Debug.Log("Settings");
     }
     public void SavesButton()
     {
-        StartCoroutine(_gm.CloseTransition(0.5f));
+        SceneManager.LoadScene(4);
         Debug.Log("Saves");
     }
     public void QuitButton()
     {
-
-        StartCoroutine(_gm.CloseTransition(0.5f));
         Debug.Log("Quit");
     }
     
-    /// <summary>
-    /// Coroutine to wait for <see cref="TransitionElevator.ElevatorTransition(float)"/> to finish before loading the new scene
-    /// </summary>
     
 }
