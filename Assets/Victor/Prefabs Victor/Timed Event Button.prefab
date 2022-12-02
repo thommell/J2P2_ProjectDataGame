@@ -518,7 +518,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 5
   m_Sprite: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.19607843}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -543,7 +543,10 @@ MonoBehaviour:
   unclickedButton: {fileID: 21300000, guid: 7f19b848a8a2cb7428356dbee962408b, type: 3}
   clickedButton: {fileID: 21300000, guid: 1639e01b60cc73f41916b0a052fb0cf9, type: 3}
   _sr: {fileID: 5260650656096714297}
+  _mgs: {fileID: 0}
+  _fc: {fileID: 0}
   _slider: {fileID: 2233970103064169224}
+  buttonsCleared: 0
 --- !u!1 &8674750698313459894
 GameObject:
   m_ObjectHideFlags: 0
