@@ -31,7 +31,9 @@ public class CryptoUpgrades : MonoBehaviour
     float botPrice = 1000f;
     bool botActive = false;
 
-    [Header("Crypto Mining Trojan")]
+    
+
+
     public Button MiningTrojan;
     int trojan = 0;
     public TextMeshProUGUI displayTrojanPrice;
