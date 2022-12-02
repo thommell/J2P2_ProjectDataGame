@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ShopOpener : MonoBehaviour
 {
@@ -10,9 +11,14 @@ public class ShopOpener : MonoBehaviour
     [SerializeField] Button mainmenuButton;
     public GameObject shopPanel;
     bool shopActive = false;
-    void Update()
+    private void Start()
     {
-
+        mainmenuButton.onClick.AddListener(GoToLobby);
+    }
+    public void GoToLobby()
+    {
+        Debug.Log("test");
+        SceneManager.LoadScene(0);
     }
 
     public void EnableShop()
@@ -32,10 +38,8 @@ public class ShopOpener : MonoBehaviour
             mainmenuButton.gameObject.SetActive(true);
 
         }
-
-
-
     }
+    
     public void DisableShop()
     {
         shopPanel.SetActive(false);
