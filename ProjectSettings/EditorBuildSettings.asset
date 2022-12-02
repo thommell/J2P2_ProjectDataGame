@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Thom/Scenes/Thom Scene 24 11.unity
     guid: 179dfb1278600034dba95e0bc425a821
-  - enabled: 0
-    path: Assets/Scenes/Main.unity
-    guid: 051ed532e2906ae418bbc671a5550413
+  - enabled: 1
+    path: Assets/Victor/Scenes Victor/Minigame.unity
+    guid: 259575b41b02a5a459360be0849b47be
   m_configObjects: {}
