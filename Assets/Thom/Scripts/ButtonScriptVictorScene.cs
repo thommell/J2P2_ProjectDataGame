@@ -15,7 +15,7 @@ public class ButtonScriptVictorScene : MonoBehaviour
 
     public void MainMenu()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 
 
