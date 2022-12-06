@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    public int wonMinigames = 0;
+
     [SerializeField] ReadFromJson _rfj;
     private void Awake()
     {
