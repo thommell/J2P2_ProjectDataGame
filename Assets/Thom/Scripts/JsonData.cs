@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 [System.Serializable]
-public class JsonData : MonoBehaviour
+public class JsonData
 {
-    public int totalTapData;
+    public float totalPoints;
     public int tappedData;
     public float timeData;
     public int winData;
     public int loseData;
     public int totalUpgradesData;
-    public float totalCoints;
 
     [Header("GTX 9090 variables etc")]
     public int gtxCountData;
