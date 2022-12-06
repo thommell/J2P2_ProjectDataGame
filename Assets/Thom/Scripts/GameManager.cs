@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    [SerializeField] ReadFromJson _rfj;
+   // [SerializeField] ReadFromJson _rfj;
     private void Awake()
     {
         if (instance == null || instance == this)
