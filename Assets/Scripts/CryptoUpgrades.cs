@@ -6,10 +6,10 @@ using TMPro;
 
 public class CryptoUpgrades : MonoBehaviour
 {
-   
-    public BasicClickSystem script;
-  
 
+    public BasicClickSystem script;
+
+    
     [Header("GTX 9090 variables etc")]
     public Button GTX9090;
     [SerializeField] int GTX = 0;
@@ -31,7 +31,7 @@ public class CryptoUpgrades : MonoBehaviour
     float botPrice = 1000f;
     bool botActive = false;
 
-    
+
 
 
     public Button MiningTrojan;
@@ -92,10 +92,10 @@ public class CryptoUpgrades : MonoBehaviour
 
     void Update()
     {
-        displayGTXPrice.text =("€ ") + System.Math.Round(gtxPrice) + ("   Level   " + GTX).ToString();
-        displayApePrice.text =("€ ") + System.Math.Round(apePrice) + ("   Level   " + ape).ToString();
-        displayBotPrice.text =("€ ") + System.Math.Round(botPrice) + ("   Level   " + bot).ToString();
-        displayTrojanPrice.text =("€ ") + System.Math.Round(trojanPrice) + ("   Level   " + trojan).ToString();
+        displayGTXPrice.text = ("€ ") + System.Math.Round(gtxPrice) + ("   Level   " + GTX).ToString();
+        displayApePrice.text = ("€ ") + System.Math.Round(apePrice) + ("   Level   " + ape).ToString();
+        displayBotPrice.text = ("€ ") + System.Math.Round(botPrice) + ("   Level   " + bot).ToString();
+        displayTrojanPrice.text = ("€ ") + System.Math.Round(trojanPrice) + ("   Level   " + trojan).ToString();
         displayMisinformationPrice.text = ("€ ") + System.Math.Round(misinformationPrice) + ("   Level   " + mis).ToString();
         displayPNGPrice.text = ("€ ") + System.Math.Round(monkeyPrice) + ("   Level   " + png).ToString();
         displayRadditPrice.text = ("€ ") + System.Math.Round(radditPrice) + ("   Level   " + top).ToString();
@@ -104,7 +104,7 @@ public class CryptoUpgrades : MonoBehaviour
         displayMarketPrice.text = ("€ ") + System.Math.Round(illuminatiPrice) + ("   Level   " + market).ToString();
         displayTotalAutoPoints.text = System.Math.Round(totalAutoPoints).ToString();
 
-        if(autoPeriod > 1f)
+        if (autoPeriod > 1f)
         {
             if (trojanActive == true)
             {
@@ -116,7 +116,7 @@ public class CryptoUpgrades : MonoBehaviour
                 else
                     script.points += trojan * 3.5f;
             }
-            if(illuminatiActive == true)
+            if (illuminatiActive == true)
             {
                 script.points += market * 100f;
                 totalAutoPoints += market * 100f;
@@ -142,16 +142,16 @@ public class CryptoUpgrades : MonoBehaviour
                     script.points += bot * 12.5f;
                     totalAutoPoints += ape * 12.5f / 2.5f;
                 }
-                else 
-                   script.points += bot * 15.5f;
-                   totalAutoPoints += ape * 15.5f / 2.5f;
+                else
+                    script.points += bot * 15.5f;
+                totalAutoPoints += ape * 15.5f / 2.5f;
             }
             period = 0;
         }
 
         if (period2 > 7.5f)
         {
-           
+            
             if (misinformationActive == true)
             {
                 script.points += mis * 50f;
@@ -159,7 +159,7 @@ public class CryptoUpgrades : MonoBehaviour
             }
             period2 = 0;
         }
-        
+
         if (period3 > 15f)
         {
             if (monkeyActive == true)
@@ -167,12 +167,12 @@ public class CryptoUpgrades : MonoBehaviour
                 script.points += png * 125f;
                 totalAutoPoints += png * 125f / 15f;
             }
-            if(RadditActive == true)
+            if (RadditActive == true)
             {
                 script.points += top * 300f;
                 totalAutoPoints += top * 300f / 15f;
             }
-            if(influencerActive == true)
+            if (influencerActive == true)
             {
                 script.points += crypto * 350f;
                 totalAutoPoints += crypto * 350f / 15f;
@@ -180,9 +180,9 @@ public class CryptoUpgrades : MonoBehaviour
             }
             period3 = 0;
         }
-        if(period4 > 30f)
+        if (period4 > 30f)
         {
-            if(bloodActive == true)
+            if (bloodActive == true)
             {
                 script.points += blood * 1000f;
                 totalAutoPoints += blood * 1000f / 30f;
@@ -191,22 +191,22 @@ public class CryptoUpgrades : MonoBehaviour
         }
 
         autoPeriod += UnityEngine.Time.deltaTime;
-        period += UnityEngine.Time.deltaTime; 
+        period += UnityEngine.Time.deltaTime;
         period2 += UnityEngine.Time.deltaTime;
         period3 += UnityEngine.Time.deltaTime;
         period4 += UnityEngine.Time.deltaTime;
     }
     public void ButtonGTX9090()
     {
-       if (script.points > gtxPrice)
-       {
+        if (script.points > gtxPrice)
+        {
             script.points -= gtxPrice;
             Debug.Log("upgradeprice = " + gtxPrice);
             gtxPrice = gtxPrice * 1.2f;
             GTX++;
-            Debug.Log("GTX9090 lvl: " + GTX);          
-       } 
-       if (GTX >= 1)
+            Debug.Log("GTX9090 lvl: " + GTX);
+        }
+        if (GTX >= 1)
         {
             gtxActive = true;
         }
@@ -284,7 +284,7 @@ public class CryptoUpgrades : MonoBehaviour
             monkeyPrice = monkeyPrice * 1.175f;
             png++;
         }
-        if( png >= 1)
+        if (png >= 1)
         {
             monkeyActive = true;
         }
@@ -312,7 +312,7 @@ public class CryptoUpgrades : MonoBehaviour
             influencerPrice = influencerPrice * 1.2f;
             crypto++;
         }
-        if(crypto >= 1)
+        if (crypto >= 1)
         {
             influencerActive = true;
         }
@@ -326,7 +326,7 @@ public class CryptoUpgrades : MonoBehaviour
             bsttcgPrice = bsttcgPrice * 1.225f;
             blood++;
         }
-        if ( blood >= 1)
+        if (blood >= 1)
         {
             bloodActive = true;
         }
