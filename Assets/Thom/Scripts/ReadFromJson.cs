@@ -12,7 +12,7 @@ public class ReadFromJson : MonoBehaviour
         if (!File.Exists("/PlayerDataFile.json"))
         {
             string dataPath = @"C:\Users\Thom\Desktop\School\Unity\GitHub\Github Projects\J2P2_ProjectDataGame\Assets";
-            using (FileStream fs = File.Create(dataPath)) ;
+            using FileStream fs = File.Create(dataPath);
         }
     }
     // fix not loading saved data
