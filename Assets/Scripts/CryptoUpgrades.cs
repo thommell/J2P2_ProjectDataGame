@@ -12,70 +12,70 @@ public class CryptoUpgrades : MonoBehaviour
 
     [Header("GTX 9090 variables etc")]
     public Button GTX9090;
-    int GTX = 0;
+    [SerializeField] int GTX = 0;
     public TextMeshProUGUI displayGTXPrice;
     public float gtxPrice = 100f;
     bool gtxActive = false;
 
     [Header("Crypto Ape")]
     public Button CryptoApe;
-    int ape = 0;
+    [SerializeField] int ape = 0;
     public TextMeshProUGUI displayApePrice;
     float apePrice = 500f;
     bool apeActive = false;
 
     [Header("Trade Bot")]
     public Button TradeBot;
-    int bot = 0;
+    [SerializeField] int bot = 0;
     public TextMeshProUGUI displayBotPrice;
     float botPrice = 1000f;
     bool botActive = false;
 
     [Header("Crypto Mining Trojan")]
     public Button MiningTrojan;
-    int trojan = 0;
+    [SerializeField] int trojan = 0;
     public TextMeshProUGUI displayTrojanPrice;
     float trojanPrice = 1750f;
     bool trojanActive = false;
 
     [Header("Crypto Price Misinformation")]
     public Button Misinformation;
-    int mis = 0;
+    [SerializeField] int mis = 0;
     public TextMeshProUGUI displayMisinformationPrice;
     float misinformationPrice = 2300;
     bool misinformationActive = false;
 
     [Header("Monkey PNG")]
     public Button MonkeyPNG;
-    int png = 0;
+    [SerializeField] int png = 0;
     public TextMeshProUGUI displayPNGPrice;
     float monkeyPrice = 3000f;
     bool monkeyActive = false;
 
     [Header("Top Raddit Cryptowins")]
     public Button TopRadditCryptowins;
-    int top = 0;
+    [SerializeField] int top = 0;
     public TextMeshProUGUI displayRadditPrice;
     float radditPrice = 5000f;
     bool RadditActive = false;
 
     [Header("Crypto Influencer")]
     public Button CryptoInfluencer;
-    int crypto = 0;
+    [SerializeField] int crypto = 0;
     public TextMeshProUGUI displayInfluencerPrice;
     float influencerPrice = 12500f;
     bool influencerActive = false;
 
     [Header("Blood Sacrifice To The Crypto Gods")]
     public Button BloodSacrificeTTCG;
-    int blood = 0;
+    [SerializeField] int blood = 0;
     public TextMeshProUGUI displayBSTTCGPrice;
     float bsttcgPrice = 50000f;
     bool bloodActive = false;
 
     [Header("Illuminati Market Control")]
     public Button IlluminatiMarketControl;
-    int market = 0;
+    [SerializeField] int market = 0;
     public TextMeshProUGUI displayMarketPrice;
     float illuminatiPrice = 100000f;
     bool illuminatiActive = false;
@@ -85,6 +85,8 @@ public class CryptoUpgrades : MonoBehaviour
     private float period2 = 0.0f;
     private float period3 = 0.0f;
     private float period4 = 0.0f;
+    private float totalAutoPoints;
+    public TextMeshProUGUI displayTotalAutoPoints;
 
     void Update()
     {
@@ -98,44 +100,50 @@ public class CryptoUpgrades : MonoBehaviour
         displayInfluencerPrice.text = ("€ ") + System.Math.Round(influencerPrice) + ("   Level   " + crypto).ToString();
         displayBSTTCGPrice.text = ("€ ") + System.Math.Round(bsttcgPrice) + ("   Level   " + blood).ToString();
         displayMarketPrice.text = ("€ ") + System.Math.Round(illuminatiPrice) + ("   Level   " + market).ToString();
+        displayTotalAutoPoints.text = System.Math.Round(totalAutoPoints).ToString();
 
-        if(autoPeriod > 0.2f)
+        if(autoPeriod > 1f)
         {
             if (trojanActive == true)
             {
                 if (trojan < 5)
                 {
-                    script.points += trojan * 2.525f;
+                    script.points += trojan * 2.5f;
+                    totalAutoPoints += trojan * 2.5f;
                 }
                 else
-                    script.points += trojan * 3f;
+                    script.points += trojan * 3.5f;
             }
             if(illuminatiActive == true)
             {
-                script.points += market * 47.61f;
+                script.points += market * 100f;
+                totalAutoPoints += market * 100f;
             }
             autoPeriod = 0;
         }
-        if (period > 1.25f)
+        if (period > 2.5f)
         {
             if (gtxActive == true)
             {
-                script.points += GTX * 2;
+                script.points += GTX * 4f;
+                totalAutoPoints += GTX * 4f / 2.5f;
             }
             if (apeActive == true)
             {
-                script.points += ape * 3.5f;
+                script.points += ape * 10f;
+                totalAutoPoints += ape * 10f / 2.5f;
             }
             if (botActive == true)
             {
                 if (bot < 3)
                 {
-                    script.points += bot * 5.5f;
+                    script.points += bot * 12.5f;
+                    totalAutoPoints += ape * 12.5f / 2.5f;
                 }
                 else 
-                   script.points += bot * 8.5f;           
+                   script.points += bot * 15.5f;
+                   totalAutoPoints += ape * 15.5f / 2.5f;
             }
-
             period = 0;
         }
 
@@ -144,7 +152,8 @@ public class CryptoUpgrades : MonoBehaviour
            
             if (misinformationActive == true)
             {
-                script.points += mis * 15.5f;
+                script.points += mis * 50f;
+                totalAutoPoints += mis * 50f / 7.5f;
             }
             period2 = 0;
         }
@@ -153,24 +162,28 @@ public class CryptoUpgrades : MonoBehaviour
         {
             if (monkeyActive == true)
             {
-                script.points += png * 20f;
+                script.points += png * 125f;
+                totalAutoPoints += png * 125f / 15f;
             }
             if(RadditActive == true)
             {
-                script.points += top * 27.5f;
+                script.points += top * 300f;
+                totalAutoPoints += top * 300f / 15f;
             }
             if(influencerActive == true)
             {
-                script.points += crypto * 35f;
+                script.points += crypto * 350f;
+                totalAutoPoints += crypto * 350f / 15f;
 
             }
             period3 = 0;
         }
-        if(period4 > 30)
+        if(period4 > 30f)
         {
             if(bloodActive == true)
             {
-                script.points += blood * 75f;
+                script.points += blood * 1000f;
+                totalAutoPoints += blood * 1000f / 30f;
             }
             period4 = 0;
         }
