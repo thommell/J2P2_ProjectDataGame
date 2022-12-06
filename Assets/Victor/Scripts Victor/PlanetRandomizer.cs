@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlanetRandomizer : MonoBehaviour
 {
-    private MinigameScore _mgs;
+    public MinigameScore _mgs;
 
     private int resetAmount = 0;
     private int planetNum;
