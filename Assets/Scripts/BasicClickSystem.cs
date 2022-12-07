@@ -7,14 +7,14 @@ using UnityEngine.UI;
 public class BasicClickSystem : MonoBehaviour
 {
     public int totalTaps;
-    [SerializeField] ReadFromJson _rfj;
+ //   [SerializeField] ReadFromJson _rfj;
     [SerializeField] public float points;
     [SerializeField] public TextMeshProUGUI displayPoints, displayPoints2;
     [SerializeField] Button elonMaskButton;
 
     private void Awake()
     {
-        _rfj.LoadFromJSON();
+  //      _rfj.LoadFromJSON();
     }
     void Update()
     {
@@ -29,6 +29,6 @@ public class BasicClickSystem : MonoBehaviour
 
     public void SaveData()
     {
-        _rfj.SaveUserData();
+  //      _rfj.SaveUserData();
     }
 }

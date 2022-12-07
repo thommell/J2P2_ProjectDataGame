@@ -19,7 +19,7 @@ public class ReadFromJson : MonoBehaviour
     {
         Debug.Log("Saved Data!");
         JsonData playerData = new();
-        playerData.totalPoints = _bcs.currentPoints;
+     //   playerData.totalPoints = _bcs.currentPoints;
         playerData.tappedData = _bcs.totalTaps;
         Debug.Log("SAVED points: " + playerData.totalPoints);
 
