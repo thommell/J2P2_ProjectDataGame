@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &14688963
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2434,6 +2434,7 @@ MonoBehaviour:
   influencerPrice: {fileID: 209091789}
   bloodPrice: {fileID: 403728233}
   illuminatiPrice: {fileID: 792917905}
+  minigameButton: {fileID: 14688964}
   _bcs: {fileID: 599849345}
   cps: 0
 --- !u!1 &599849341

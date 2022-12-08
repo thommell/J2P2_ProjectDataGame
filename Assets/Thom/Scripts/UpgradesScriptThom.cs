@@ -34,6 +34,7 @@ public class UpgradesScriptThom : MonoBehaviour
     public TextMeshProUGUI influencerPrice;
     public TextMeshProUGUI bloodPrice;
     public TextMeshProUGUI illuminatiPrice;
+    public Button minigameButton;
 
 
 
@@ -41,6 +42,11 @@ public class UpgradesScriptThom : MonoBehaviour
     public float cps;
     public void Update()
     {
+        if (gtx[2] == 10 && ape[2] == 10 && tradeBot[2] == 10 && cryptoMiningTrojan[2] == 10 && cryptoPriceMisinfo[2] == 10 && monkeyPng[2] == 10 && topRaddit[2] == 10 && cryptoInfluencer[2] == 10 && bloodSacrifice[2] == 10 && illuminatiMC[2] == 10)
+        {
+            minigameButton.enabled = true;
+        }
+
         gtxPrice.text = ("€ ") + System.Math.Round(gtx[0]) + ("   Level   " + gtx[2]).ToString();  
         apePrice.text = ("€ ") + System.Math.Round(ape[0]) + ("   Level   " + ape[2]).ToString();
         tradeBotPrice.text = ("€ ") + System.Math.Round(tradeBot[0]) + ("   Level   " + tradeBot[2]).ToString();
@@ -58,7 +64,7 @@ public class UpgradesScriptThom : MonoBehaviour
     }
     public void BuyGtx()
     {
-        if (_bcs.points >= gtx[0])
+        if (_bcs.points >= gtx[0] && gtx[2] <10)
         {
             Debug.Log("Bought 1 GTX");
             // Make gtx more expensive
@@ -72,7 +78,7 @@ public class UpgradesScriptThom : MonoBehaviour
     }
     public void BuyApe()
     {
-        if (_bcs.points >= ape[0])
+        if (_bcs.points >= ape[0] && ape[2] < 10)
         {
             Debug.Log("Bought 1 APE");
             // Make ape more expensive
@@ -86,7 +92,7 @@ public class UpgradesScriptThom : MonoBehaviour
     }
     public void BuyTradeBot()
     {
-        if (_bcs.points >= tradeBot[0])
+        if (_bcs.points >= tradeBot[0] && tradeBot[2] < 10)
         {
             Debug.Log("Bought 1 TRADEBOT");
             // Make tradebot more expensive
@@ -100,7 +106,7 @@ public class UpgradesScriptThom : MonoBehaviour
     }
     public void BuyCryptoMiningTrojan()
     {
-        if (_bcs.points >= cryptoMiningTrojan[0])
+        if (_bcs.points >= cryptoMiningTrojan[0] && cryptoMiningTrojan[2] < 10)
         {
             Debug.Log("Bought 1 CRYPTOMININGTROJAN");
             // Make cryptoMiningTrojan more expensive
@@ -114,7 +120,7 @@ public class UpgradesScriptThom : MonoBehaviour
     }
     public void BuyPriceMisInfo()
     {
-        if (_bcs.points >= cryptoPriceMisinfo[0])
+        if (_bcs.points >= cryptoPriceMisinfo[0] && cryptoPriceMisinfo[2] < 10)
         {
             Debug.Log("Bought 1 PRICEMISINFO");
             // Make cryptoPriceMisinfo more expensive
@@ -128,7 +134,7 @@ public class UpgradesScriptThom : MonoBehaviour
     }
     public void BuyMonkeyPng()
     {
-        if (_bcs.points >= monkeyPng[0])
+        if (_bcs.points >= monkeyPng[0] && monkeyPng[2] < 10)
         {
             Debug.Log("Bought 1 MONKEYPNG");
             // Make monkeyPng more expensive
@@ -142,7 +148,7 @@ public class UpgradesScriptThom : MonoBehaviour
     }
     public void BuyTopRaddit()
     {
-        if (_bcs.points >= topRaddit[0])
+        if (_bcs.points >= topRaddit[0] && topRaddit[2] < 10)
         {
             Debug.Log("Bought 1 TOPRADDIT");
             // Make topRaddit more expensive
@@ -156,7 +162,7 @@ public class UpgradesScriptThom : MonoBehaviour
     }
     public void BuyCryptoInfluencer()
     {
-        if (_bcs.points >= cryptoInfluencer[0])
+        if (_bcs.points >= cryptoInfluencer[0] && cryptoInfluencer[2] < 10)
         {
             Debug.Log("Bought 1 cryptoInfluencer");
             // Make cryptoInfluencer more expensive
@@ -170,7 +176,7 @@ public class UpgradesScriptThom : MonoBehaviour
     }
     public void BuyBloodSacrifice()
     {
-        if (_bcs.points >= bloodSacrifice[0])
+        if (_bcs.points >= bloodSacrifice[0] && bloodSacrifice[2] < 10)
         {
             Debug.Log("Bought 1 BLOODSACRIFICE");
             // Make bloodSacrifice more expensive
@@ -184,7 +190,7 @@ public class UpgradesScriptThom : MonoBehaviour
     }
     public void BuyIlluminatiMC()
     {
-        if (_bcs.points >= illuminatiMC[0])
+        if (_bcs.points >= illuminatiMC[0] && illuminatiMC[2] < 10)
         {
             Debug.Log("Bought 1 ILLUMINATIMC");
             // Make illuminatiMC more expensive

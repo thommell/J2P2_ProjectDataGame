@@ -5,10 +5,13 @@ using UnityEngine;
 
 public class PlanetRandomizer : MonoBehaviour
 {
+    private UpgradesScriptThom _ugst;
     private MinigameScore _mgs;
     public bool makePlanet = false;
+    public bool minigameFail = false;
 
-    private int resetAmount = 0;
+
+    public int resetAmount = 0;
     private int planetNum;
     private int ringNum;
     private int moonNum;
@@ -26,6 +29,7 @@ public class PlanetRandomizer : MonoBehaviour
     }
     private void Start()
     {
+        
         RandomPlanet();
     }
     private void RandomPlanet()
@@ -91,11 +95,39 @@ public class PlanetRandomizer : MonoBehaviour
     
     private void Update()
     {
-      if(makePlanet)
+        _ugst = FindObjectOfType<UpgradesScriptThom>();
+        if (makePlanet)
         {
+            _ugst.gtx[2] = 0;
+            _ugst.ape[2] = 0;
+            _ugst.tradeBot[2] = 0;
+            _ugst.cryptoMiningTrojan[2] = 0;
+            _ugst.cryptoPriceMisinfo[2] = 0;
+            _ugst.monkeyPng[2] = 0;
+            _ugst.topRaddit[2] = 0;
+            _ugst.cryptoInfluencer[2] = 0;
+            _ugst.bloodSacrifice[2] = 0;
+            _ugst.illuminatiMC[2] = 0;
+            minigameFail = false;
+            makePlanet = false;
             RandomPlanet();
             resetAmount++;
-            makePlanet = false;
+            
+        }
+
+        if (minigameFail)
+        {
+            _ugst.gtx[2] = 0;
+            _ugst.ape[2] = 0;
+            _ugst.tradeBot[2] = 0;
+            _ugst.cryptoMiningTrojan[2] = 0;
+            _ugst.cryptoPriceMisinfo[2] = 0;
+            _ugst.monkeyPng[2] = 0;
+            _ugst.topRaddit[2] = 0;
+            _ugst.cryptoInfluencer[2] = 0;
+            _ugst.bloodSacrifice[2] = 0;
+            _ugst.illuminatiMC[2] = 0;
+            minigameFail = false;
         }
     }
 }

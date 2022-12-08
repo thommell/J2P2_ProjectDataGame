@@ -1,0 +1,145 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5547196861077168624
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5547196861077168627}
+  - component: {fileID: 5547196861077168629}
+  - component: {fileID: 5547196861077168628}
+  m_Layer: 0
+  m_Name: Upgrades
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5547196861077168627
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5547196861077168624}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 720, y: 1770, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5547196861077168629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5547196861077168624}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a147292bd4ae2864b828d0547d60346c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script: {fileID: 0}
+  GTX9090: {fileID: 0}
+  GTX: 0
+  displayGTXPrice: {fileID: 0}
+  gtxPrice: 100
+  CryptoApe: {fileID: 0}
+  ape: 0
+  displayApePrice: {fileID: 0}
+  TradeBot: {fileID: 0}
+  bot: 0
+  displayBotPrice: {fileID: 0}
+  MiningTrojan: {fileID: 0}
+  trojan: 0
+  displayTrojanPrice: {fileID: 0}
+  Misinformation: {fileID: 0}
+  mis: 0
+  displayMisinformationPrice: {fileID: 0}
+  MonkeyPNG: {fileID: 0}
+  png: 0
+  displayPNGPrice: {fileID: 0}
+  TopRadditCryptowins: {fileID: 0}
+  top: 0
+  displayRadditPrice: {fileID: 0}
+  CryptoInfluencer: {fileID: 0}
+  crypto: 0
+  displayInfluencerPrice: {fileID: 0}
+  BloodSacrificeTTCG: {fileID: 0}
+  blood: 0
+  displayBSTTCGPrice: {fileID: 0}
+  IlluminatiMarketControl: {fileID: 0}
+  market: 0
+  displayMarketPrice: {fileID: 0}
+  displayTotalAutoPoints: {fileID: 0}
+--- !u!114 &5547196861077168628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5547196861077168624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01215a08037a20f4ba9987a9997ed08f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gtx:
+  - 100
+  - 2
+  - 0
+  ape:
+  - 500
+  - 8
+  - 0
+  tradeBot:
+  - 1000
+  - 12
+  - 0
+  cryptoMiningTrojan:
+  - 1750
+  - 15
+  - 0
+  cryptoPriceMisinfo:
+  - 2300
+  - 18
+  - 0
+  monkeyPng:
+  - 2800
+  - 20
+  - 0
+  topRaddit:
+  - 5000
+  - 0
+  - 0
+  cryptoInfluencer:
+  - 10000
+  - 40
+  - 0
+  bloodSacrifice:
+  - 50000
+  - 60
+  - 0
+  illuminatiMC:
+  - 100000
+  - 125
+  - 0
+  gtxPrice: {fileID: 0}
+  apePrice: {fileID: 0}
+  tradeBotPrice: {fileID: 0}
+  trojanPrice: {fileID: 0}
+  misinfoPrice: {fileID: 0}
+  monkeyPrice: {fileID: 0}
+  radditPrice: {fileID: 0}
+  influencerPrice: {fileID: 0}
+  bloodPrice: {fileID: 0}
+  illuminatiPrice: {fileID: 0}
+  minigameButton: {fileID: 0}
+  _bcs: {fileID: 0}
+  cps: 0
