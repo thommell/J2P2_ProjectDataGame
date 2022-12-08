@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlanetRandomizer : MonoBehaviour
 {
     private MinigameScore _mgs;
+    public bool makePlanet = false;
 
     private int resetAmount = 0;
     private int planetNum;
@@ -90,10 +91,11 @@ public class PlanetRandomizer : MonoBehaviour
     
     private void Update()
     {
-      if(resetAmount < _mgs.wonMinigames)
+      if(makePlanet)
         {
             RandomPlanet();
             resetAmount++;
+            makePlanet = false;
         }
     }
 }

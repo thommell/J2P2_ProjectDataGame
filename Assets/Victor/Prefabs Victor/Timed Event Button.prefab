@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 318138184166413348}
   - component: {fileID: 5917833980806914945}
   - component: {fileID: 2233970103064169224}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 1355050616640689470}
   - component: {fileID: 8073122260526680455}
   - component: {fileID: 6055961340118238298}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,7 +164,7 @@ GameObject:
   - component: {fileID: 4243340730865481770}
   - component: {fileID: 4243340730865481771}
   - component: {fileID: 4243340730865481772}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -265,7 +265,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6984179313504048952}
   - component: {fileID: 6136769634796694571}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Button Green
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -349,7 +349,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8607781970983756061}
   - component: {fileID: 3978918996605767692}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Button Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -435,7 +435,7 @@ GameObject:
   - component: {fileID: 3872083742395179176}
   - component: {fileID: 5260650656096714297}
   - component: {fileID: 4606151690492842610}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Timed Event Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -516,16 +516,16 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
-  m_Sprite: {fileID: 0}
+  m_SortingOrder: 4
+  m_Sprite: {fileID: 21300000, guid: 7f19b848a8a2cb7428356dbee962408b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.64, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &4606151690492842610
@@ -543,7 +543,10 @@ MonoBehaviour:
   unclickedButton: {fileID: 21300000, guid: 7f19b848a8a2cb7428356dbee962408b, type: 3}
   clickedButton: {fileID: 21300000, guid: 1639e01b60cc73f41916b0a052fb0cf9, type: 3}
   _sr: {fileID: 5260650656096714297}
+  _mgs: {fileID: 0}
+  _fc: {fileID: 0}
   _slider: {fileID: 2233970103064169224}
+  buttonsCleared: 0
 --- !u!1 &8674750698313459894
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,7 +558,7 @@ GameObject:
   - component: {fileID: 3191479211800700264}
   - component: {fileID: 8673788633790817643}
   - component: {fileID: 8832163225004382327}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
