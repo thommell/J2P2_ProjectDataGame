@@ -6,15 +6,21 @@ using UnityEngine.SceneManagement;
 public class ButtonScriptOlivierScene : MonoBehaviour
 {
     [SerializeField] Button goToMiniGame;
+    [SerializeField] Button mainmenuButton;
 
     private void Start()
     {
-        goToMiniGame.onClick.AddListener(GoMiniGame);
+        goToMiniGame.onClick.AddListener(GoMiniGame); 
+        mainmenuButton.onClick.AddListener(GoToLobby);
     }
-
-    public void GoMiniGame()
+    public void GoToLobby()
     {
-        SceneManager.LoadScene(3);
+        Debug.Log("test");
+        SceneManager.LoadScene(0);
+    }
+public void GoMiniGame()
+    {
+        SceneManager.LoadScene(2);
     }
 
 

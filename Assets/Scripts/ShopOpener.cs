@@ -13,12 +13,6 @@ public class ShopOpener : MonoBehaviour
     bool shopActive = false;
     private void Start()
     {
-        mainmenuButton.onClick.AddListener(GoToLobby);
-    }
-    public void GoToLobby()
-    {
-        Debug.Log("test");
-        SceneManager.LoadScene(0);
     }
 
     public void EnableShop()
