@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class UpgradesScriptThom : MonoBehaviour
 {
@@ -21,12 +23,41 @@ public class UpgradesScriptThom : MonoBehaviour
     public float[] bloodSacrifice = new float[3] { 50000, 60, 0 };
     public float[] illuminatiMC = new float[3] { 100000, 125, 0 };
 
+    [Header("Links to price display")]
+    public TextMeshProUGUI gtxPrice;
+    public TextMeshProUGUI apePrice;
+    public TextMeshProUGUI tradeBotPrice;
+    public TextMeshProUGUI trojanPrice;
+    public TextMeshProUGUI misinfoPrice;
+    public TextMeshProUGUI monkeyPrice;
+    public TextMeshProUGUI radditPrice;
+    public TextMeshProUGUI influencerPrice;
+    public TextMeshProUGUI bloodPrice;
+    public TextMeshProUGUI illuminatiPrice;
 
 
+
+    [SerializeField] BasicClickSystem _bcs;
+
+    public void Update()
+    {
+        gtxPrice.text = ("€ ") + System.Math.Round(gtx[0]) + ("   Level   " + gtx[2]).ToString();  
+        apePrice.text = ("€ ") + System.Math.Round(ape[0]) + ("   Level   " + ape[2]).ToString();
+        tradeBotPrice.text = ("€ ") + System.Math.Round(tradeBot[0]) + ("   Level   " + tradeBot[2]).ToString();
+        trojanPrice.text = ("€ ") + System.Math.Round(cryptoMiningTrojan[0]) + ("   Level   " + cryptoMiningTrojan[2]).ToString();
+        misinfoPrice.text = ("€ ") + System.Math.Round(cryptoPriceMisinfo[0]) + ("   Level   " + cryptoPriceMisinfo[2]).ToString();
+        monkeyPrice.text = ("€ ") + System.Math.Round(monkeyPng[0]) + ("   Level   " + monkeyPng[2]).ToString();
+        radditPrice.text = ("€ ") + System.Math.Round(topRaddit[0]) + ("   Level   " + topRaddit[2]).ToString();
+        influencerPrice.text = ("€ ") + System.Math.Round(cryptoInfluencer[0]) + ("   Level   " + cryptoInfluencer[2]).ToString();
+        bloodPrice.text = ("€ ") + System.Math.Round(bloodSacrifice[0]) + ("   Level   " + bloodSacrifice[2]).ToString();
+        illuminatiPrice.text = ("€ ") + System.Math.Round(illuminatiMC[0]) + ("   Level   " + illuminatiMC[2]).ToString();
+
+    }
     public void BuyGtx()
     {
         Debug.Log("Bought 1 GTX");
         // Make gtx more expensive
+        _bcs.points = _bcs.points - gtx[0];
         gtx[0] = Mathf.RoundToInt(gtx[0] * 1.2f);
         gtx[2]++;
         // debugging
@@ -37,6 +68,7 @@ public class UpgradesScriptThom : MonoBehaviour
     {
         Debug.Log("Bought 1 APE");
         // Make ape more expensive
+        _bcs.points = _bcs.points - ape[0];
         ape[0] = Mathf.RoundToInt(ape[0] * 1.2f);
         ape[2]++;
         // debugging
@@ -47,6 +79,7 @@ public class UpgradesScriptThom : MonoBehaviour
     {
         Debug.Log("Bought 1 TRADEBOT");
         // Make tradebot more expensive
+        _bcs.points = _bcs.points - tradeBot[0];
         tradeBot[0] = Mathf.RoundToInt(tradeBot[0] * 1.2f);
         tradeBot[2]++;
         // debugging
@@ -57,6 +90,7 @@ public class UpgradesScriptThom : MonoBehaviour
     {
         Debug.Log("Bought 1 CRYPTOMININGTROJAN");
         // Make cryptoMiningTrojan more expensive
+        _bcs.points = _bcs.points - cryptoMiningTrojan[0];
         cryptoMiningTrojan[0] = Mathf.RoundToInt(cryptoMiningTrojan[0] * 1.2f);
         cryptoMiningTrojan[2]++;
         // debugging
@@ -68,6 +102,7 @@ public class UpgradesScriptThom : MonoBehaviour
     {
         Debug.Log("Bought 1 PRICEMISINFO");
         // Make cryptoPriceMisinfo more expensive
+        _bcs.points = _bcs.points - cryptoPriceMisinfo[0];
         cryptoPriceMisinfo[0] = Mathf.RoundToInt(cryptoPriceMisinfo[0] * 1.2f);
         cryptoPriceMisinfo[2]++;
         // debugging
@@ -78,6 +113,7 @@ public class UpgradesScriptThom : MonoBehaviour
     {
         Debug.Log("Bought 1 MONKEYPNG");
         // Make monkeyPng more expensive
+        _bcs.points = _bcs.points - monkeyPng[0];
         monkeyPng[0] = Mathf.RoundToInt(monkeyPng[0] * 1.2f);
         monkeyPng[2]++;
         // debugging
@@ -88,6 +124,7 @@ public class UpgradesScriptThom : MonoBehaviour
     {
         Debug.Log("Bought 1 TOPRADDIT");
         // Make topRaddit more expensive
+        _bcs.points = _bcs.points - topRaddit[0];
         topRaddit[0] = Mathf.RoundToInt(topRaddit[0] * 1.2f);
         topRaddit[2]++;
         // debugging
@@ -98,6 +135,7 @@ public class UpgradesScriptThom : MonoBehaviour
     {
         Debug.Log("Bought 1 cryptoInfluencer");
         // Make cryptoInfluencer more expensive
+        _bcs.points = _bcs.points - cryptoInfluencer[0];
         cryptoInfluencer[0] = Mathf.RoundToInt(cryptoInfluencer[0] * 1.2f);
         cryptoInfluencer[2]++;
         // debugging
@@ -108,6 +146,7 @@ public class UpgradesScriptThom : MonoBehaviour
     {
         Debug.Log("Bought 1 BLOODSACRIFICE");
         // Make bloodSacrifice more expensive
+        _bcs.points = _bcs.points - bloodSacrifice[0];
         bloodSacrifice[0] = Mathf.RoundToInt(bloodSacrifice[0] * 1.2f);
         bloodSacrifice[2]++;
         // debugging
@@ -118,6 +157,7 @@ public class UpgradesScriptThom : MonoBehaviour
     {
         Debug.Log("Bought 1 ILLUMINATIMC");
         // Make illuminatiMC more expensive
+        _bcs.points = _bcs.points - illuminatiMC[0];
         illuminatiMC[0] = Mathf.RoundToInt(illuminatiMC[0] * 1.2f);
         illuminatiMC[2]++;
         // debugging
