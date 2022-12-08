@@ -330,9 +330,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 590545460}
-        m_TargetAssemblyTypeName: CryptoUpgrades, Assembly-CSharp
-        m_MethodName: ButtonCryptoInfluencer
+      - m_Target: {fileID: 590545461}
+        m_TargetAssemblyTypeName: UpgradesScriptThom, Assembly-CSharp
+        m_MethodName: BuyCryptoInfluencer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1140,9 +1140,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 590545460}
-        m_TargetAssemblyTypeName: CryptoUpgrades, Assembly-CSharp
-        m_MethodName: ButtonCryptoPriceMisinformation
+      - m_Target: {fileID: 590545461}
+        m_TargetAssemblyTypeName: UpgradesScriptThom, Assembly-CSharp
+        m_MethodName: BuyPriceMisInfo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2235,6 +2235,7 @@ GameObject:
   m_Component:
   - component: {fileID: 590545458}
   - component: {fileID: 590545460}
+  - component: {fileID: 590545461}
   m_Layer: 0
   m_Name: Upgrades
   m_TagString: Untagged
@@ -2264,7 +2265,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 590545457}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a147292bd4ae2864b828d0547d60346c, type: 3}
   m_Name: 
@@ -2302,6 +2303,69 @@ MonoBehaviour:
   market: 0
   displayMarketPrice: {fileID: 792917905}
   displayTotalAutoPoints: {fileID: 0}
+--- !u!114 &590545461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590545457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01215a08037a20f4ba9987a9997ed08f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gtx:
+  - 100
+  - 2
+  - 0
+  ape:
+  - 500
+  - 8
+  - 0
+  tradeBot:
+  - 1000
+  - 12
+  - 0
+  cryptoMiningTrojan:
+  - 1750
+  - 15
+  - 0
+  cryptoPriceMisinfo:
+  - 2300
+  - 18
+  - 0
+  monkeyPng:
+  - 2800
+  - 20
+  - 0
+  topRaddit:
+  - 5000
+  - 0
+  - 0
+  cryptoInfluencer:
+  - 10000
+  - 40
+  - 0
+  bloodSacrifice:
+  - 50000
+  - 60
+  - 0
+  illuminatiMC:
+  - 100000
+  - 125
+  - 0
+  gtxPrice: {fileID: 1470432385}
+  apePrice: {fileID: 923193376}
+  tradeBotPrice: {fileID: 1282727586}
+  trojanPrice: {fileID: 1021570392}
+  misinfoPrice: {fileID: 63730175}
+  monkeyPrice: {fileID: 410812095}
+  radditPrice: {fileID: 540679098}
+  influencerPrice: {fileID: 209091789}
+  bloodPrice: {fileID: 403728233}
+  illuminatiPrice: {fileID: 792917905}
+  _bcs: {fileID: 599849345}
 --- !u!1 &599849341
 GameObject:
   m_ObjectHideFlags: 0
@@ -2385,6 +2449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b1bb9ac366400c4a8abbd90e0f57330, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  totalTaps: 0
   points: 10000000
   displayPoints: {fileID: 1813236879}
   displayPoints2: {fileID: 84011475}
@@ -2715,9 +2780,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cdb1ecd02b33ac42b43c7ad9d312842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  squareL: {fileID: 1101327478}
-  squareR: {fileID: 2119733514}
-  coroutineCheck: 0
 --- !u!4 &794487408
 Transform:
   m_ObjectHideFlags: 0
@@ -2818,9 +2880,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 590545460}
-        m_TargetAssemblyTypeName: CryptoUpgrades, Assembly-CSharp
-        m_MethodName: ButtonCryptoMiningTrojan
+      - m_Target: {fileID: 590545461}
+        m_TargetAssemblyTypeName: UpgradesScriptThom, Assembly-CSharp
+        m_MethodName: BuyCryptoMiningTrojan
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3628,9 +3690,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 590545460}
-        m_TargetAssemblyTypeName: CryptoUpgrades, Assembly-CSharp
-        m_MethodName: ButtonCryptoApe
+      - m_Target: {fileID: 590545461}
+        m_TargetAssemblyTypeName: UpgradesScriptThom, Assembly-CSharp
+        m_MethodName: BuyApe
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3839,9 +3901,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 590545460}
-        m_TargetAssemblyTypeName: CryptoUpgrades, Assembly-CSharp
-        m_MethodName: ButtonTopRadditCryptowins
+      - m_Target: {fileID: 590545461}
+        m_TargetAssemblyTypeName: UpgradesScriptThom, Assembly-CSharp
+        m_MethodName: BuyTopRaddit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4843,9 +4905,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 590545460}
-        m_TargetAssemblyTypeName: CryptoUpgrades, Assembly-CSharp
-        m_MethodName: ButtonGTX9090
+      - m_Target: {fileID: 590545461}
+        m_TargetAssemblyTypeName: UpgradesScriptThom, Assembly-CSharp
+        m_MethodName: BuyGtx
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5235,9 +5297,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 590545460}
-        m_TargetAssemblyTypeName: CryptoUpgrades, Assembly-CSharp
-        m_MethodName: ButtonIlluminatiMarketControl
+      - m_Target: {fileID: 590545461}
+        m_TargetAssemblyTypeName: UpgradesScriptThom, Assembly-CSharp
+        m_MethodName: BuyIlluminatiMC
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5370,9 +5432,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 590545460}
-        m_TargetAssemblyTypeName: CryptoUpgrades, Assembly-CSharp
-        m_MethodName: ButtonBloodSacrificeToTheCryptoGods
+      - m_Target: {fileID: 590545461}
+        m_TargetAssemblyTypeName: UpgradesScriptThom, Assembly-CSharp
+        m_MethodName: BuyBloodSacrifice
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5777,9 +5839,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 590545460}
-        m_TargetAssemblyTypeName: CryptoUpgrades, Assembly-CSharp
-        m_MethodName: ButtonMonkeyPNG
+      - m_Target: {fileID: 590545461}
+        m_TargetAssemblyTypeName: UpgradesScriptThom, Assembly-CSharp
+        m_MethodName: BuyMonkeyPng
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6454,9 +6516,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 590545460}
-        m_TargetAssemblyTypeName: CryptoUpgrades, Assembly-CSharp
-        m_MethodName: ButtonTradeBot
+      - m_Target: {fileID: 590545461}
+        m_TargetAssemblyTypeName: UpgradesScriptThom, Assembly-CSharp
+        m_MethodName: BuyTradeBot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
