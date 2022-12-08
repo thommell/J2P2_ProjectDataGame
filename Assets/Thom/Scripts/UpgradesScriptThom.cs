@@ -38,7 +38,7 @@ public class UpgradesScriptThom : MonoBehaviour
 
 
     [SerializeField] BasicClickSystem _bcs;
-
+    public float cps;
     public void Update()
     {
         gtxPrice.text = ("€ ") + System.Math.Round(gtx[0]) + ("   Level   " + gtx[2]).ToString();  
@@ -51,6 +51,9 @@ public class UpgradesScriptThom : MonoBehaviour
         influencerPrice.text = ("€ ") + System.Math.Round(cryptoInfluencer[0]) + ("   Level   " + cryptoInfluencer[2]).ToString();
         bloodPrice.text = ("€ ") + System.Math.Round(bloodSacrifice[0]) + ("   Level   " + bloodSacrifice[2]).ToString();
         illuminatiPrice.text = ("€ ") + System.Math.Round(illuminatiMC[0]) + ("   Level   " + illuminatiMC[2]).ToString();
+
+        cps = (gtx[1] * gtx[2] + ape[1] * ape[2] + tradeBot[1] * tradeBot[2] + cryptoMiningTrojan[1] * cryptoMiningTrojan[2] + cryptoPriceMisinfo[1] * cryptoPriceMisinfo[2] + monkeyPng[1] * monkeyPng[2] + topRaddit[1] * topRaddit[2] + cryptoInfluencer[1] * cryptoInfluencer[2] + bloodSacrifice[1] * bloodSacrifice[2] + illuminatiMC[1] * illuminatiMC[2]);
+        Debug.Log("cps =  " + cps);
 
     }
     public void BuyGtx()
