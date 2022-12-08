@@ -2,7 +2,6 @@ using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class ReadFromJson : MonoBehaviour
 {
     [SerializeField] BasicClickSystem _bcs;
@@ -20,7 +19,7 @@ public class ReadFromJson : MonoBehaviour
     {
         Debug.Log("Saved Data!");
         JsonData playerData = new();
-        playerData.totalPoints = _bcs.points;
+     //   playerData.totalPoints = _bcs.currentPoints;
         playerData.tappedData = _bcs.totalTaps;
         Debug.Log("SAVED points: " + playerData.totalPoints);
 
